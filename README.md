@@ -1,4 +1,4 @@
-## V2
+## `v2_integralCalculator`
 
 `midpointRectangular2dim(func, a, b, c, d, nx, ny)`
 
