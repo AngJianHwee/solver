@@ -1,3 +1,5 @@
+## V2
+
 `midpointRectangular2dim(func, a, b, c, d, nx, ny)`
 
 $$\int_{a}^{b} \int_{c}^{d} f(x, y) d x d y = h_{x} h_{y} \sum_{i=0}^{n_{x}-1} \sum_{j=0}^{n_{y}-1} f\left(a+\frac{h_{x}}{2}+i h_{x}, c+
