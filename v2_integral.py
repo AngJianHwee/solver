@@ -9,6 +9,8 @@ def midpointRectangular1dim(func, a, b, n):
         integral_sum += func(a + (b-a)/n * i)
     return float(integral_sum/n)
 
+def adaptiveMidpointRectangular1dim(func, a, b, n):
+    pass
 
 def midpointRectangular2dim(func, a, b, c, d, nx, ny):
     def q(x):
@@ -31,20 +33,21 @@ def midpointRectangular4dim(func, a, b, c, d, e, f, g, h, nx, ny, nz, nw):
 
 def main():
     def func(x):
-        return x**2
-    print(midpointRectangular1dim(func, 1, 2, 999))
+        return x**x
+    print(midpointRectangular1dim(func, 0, 4, 9e8))
 
-    def func(x, y):
-        return x**2 + y**2
-    print(midpointRectangular2dim(func, 1, 2, 1, 2, 999, 999))
+    # def func(x, y):
+    #     return x**2 + y**2
+    # print(midpointRectangular2dim(func, 1, 2, 1, 2, 999, 999))
 
-    def func(x, y, z):
-        return x**2 + y**2 + z**3
-    print(midpointRectangular3dim(func, 1, 2, 1, 2, 1, 2, 150, 150, 150))
+    # def func(x, y, z):
+    #     return x**2 + y**2 + z**3
+    # print(midpointRectangular3dim(func, 1, 2, 1, 2, 1, 2, 150, 150, 150))
 
-    def func(x, y, z, w):
-        return x**2 + y**2 + z**3 + w**4
-    print(midpointRectangular4dim(func, 1, 2, 1, 2, 1, 2, 1, 2, 10, 10, 10, 10))
+    # def func(x, y, z, w):
+    #     return x**2 + y**2 + z**3 + w**4
+    # print(midpointRectangular4dim(func, 1, 2, 1, 2, 1, 2, 1, 2, 10, 10, 10, 10))
+
     return
 
 
