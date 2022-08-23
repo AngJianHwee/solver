@@ -1,4 +1,4 @@
-## `v2_integralCalculator`
+## `v2_integral.py`
 
 `midpointRectangular2dim(func, a, b, c, d, nx, ny)`
 
