@@ -33,7 +33,7 @@ Example:
 
 ```
 def func(x, y, z):
-    return x**2 + y**2 + z**3
-midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 150, 150, 150)
-> 8.373381481481482
+    return x**2 + y**2 + z**2
+midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 1e5, 1e5, 1e5)
+> 
 ```

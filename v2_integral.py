@@ -6,18 +6,20 @@ import sys
 def adaptiveMidpointRectangular1D(func, a, b, n):
     pass
 
+
 def midpointRectangular1D(func, a, b, n):
     n = int(n)
-    
+
     integral_sum = 0
     for i in range(int(n)):
         integral_sum += func(a + (b-a)/n * i)
     return float(integral_sum/n)
 
+
 def midpointRectangular2D(func, a, b, c, d, nx, ny):
     nx = int(nx)
     ny = int(ny)
-    
+
     def q(x):
         return midpointRectangular1D(lambda y: func(x, y), c, d, ny)
     return midpointRectangular1D(q, a, b, nx)
@@ -48,15 +50,15 @@ def midpointRectangular4D(func, a, b, c, d, e, f, g, h, nx, ny, nz, nw):
 def main():
     def func(x):
         return x**2
-    print(midpointRectangular1D(func, 1,2, 1e5))
+    print(midpointRectangular1D(func, 1, 2, 1e5))
 
     def func(x, y):
         return x**2 + y**2
     print(midpointRectangular2D(func, 1, 2, 1, 2, 1e5, 1e5))
 
     def func(x, y, z):
-        return x**2 + y**2 + z**3
-    print(midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 1e5, 1e5, 1e5))
+        return x**2 + y**2 + z**2
+    print(midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 1e2, 1e2))
 
     def func(x, y, z, w):
         return x**2 + y**2 + z**3 + w**4
