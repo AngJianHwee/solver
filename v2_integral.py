@@ -47,20 +47,20 @@ def midpointRectangular4D(func, a, b, c, d, e, f, g, h, nx, ny, nz, nw):
 
 def main():
     def func(x):
-        return x**x
+        return x**2
     print(midpointRectangular1D(func, 1,2, 1e5))
 
-    # def func(x, y):
-    #     return x**2 + y**2
-    # print(midpointRectangular2D(func, 1, 2, 1, 2, 999, 999))
+    def func(x, y):
+        return x**2 + y**2
+    print(midpointRectangular2D(func, 1, 2, 1, 2, 999, 999))
 
-    # def func(x, y, z):
-    #     return x**2 + y**2 + z**3
-    # print(midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 150, 150, 150))
+    def func(x, y, z):
+        return x**2 + y**2 + z**3
+    print(midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 150, 150, 150))
 
-    # def func(x, y, z, w):
-    #     return x**2 + y**2 + z**3 + w**4
-    # print(midpointRectangular4D(func, 1, 2, 1, 2, 1, 2, 1, 2, 10, 10, 10, 10))
+    def func(x, y, z, w):
+        return x**2 + y**2 + z**3 + w**4
+    print(midpointRectangular4D(func, 1, 2, 1, 2, 1, 2, 1, 2, 10, 10, 10, 10))
 
     return
 
