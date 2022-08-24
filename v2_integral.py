@@ -56,7 +56,7 @@ def main():
 
     def func(x, y, z):
         return x**2 + y**2 + z**3
-    print(midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 150, 150, 150))
+    print(midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 1e5, 1e5, 1e5))
 
     def func(x, y, z, w):
         return x**2 + y**2 + z**3 + w**4
