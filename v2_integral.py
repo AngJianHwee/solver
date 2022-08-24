@@ -52,7 +52,7 @@ def main():
 
     def func(x, y):
         return x**2 + y**2
-    print(midpointRectangular2D(func, 1, 2, 1, 2, 999, 999))
+    print(midpointRectangular2D(func, 1, 2, 1, 2, 1e5, 1e5))
 
     def func(x, y, z):
         return x**2 + y**2 + z**3
