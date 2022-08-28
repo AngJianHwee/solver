@@ -1,10 +1,5 @@
-import pandas as pd
-import os
-import sys
-
-
-def adaptiveMidpointRectangular1D(func, a, b, n):
-    pass
+# def adaptiveMidpointRectangular1D(func, a, b, n):
+    # pass
 
 
 def midpointRectangular1D(func, a, b, n):
@@ -48,22 +43,25 @@ def midpointRectangular4D(func, a, b, c, d, e, f, g, h, nx, ny, nz, nw):
 
 
 def main():
-    def func(x):
-        return x**2
-    print(midpointRectangular1D(func, 1, 2, 1e5))
+    # def func(x):
+    #     return x**2
+    # print(midpointRectangular1D(func, 1, 2, 1e5))
 
-    def func(x, y):
-        return x**2 + y**2
-    print(midpointRectangular2D(func, 1, 2, 1, 2, 1e5, 1e5))
+    # def func(x, y):
+    #     return x**2 + y**2
+    # print(midpointRectangular2D(func, 1, 2, 1, 2, 1e5, 1e5))
+
+    # def func(x, y, z):
+    #     return x**2 + y**2 + z**2
+    # print(midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 1e2, 1e2))
+
+    # def func(x, y, z, w):
+    #     return x**2 + y**2 + z**3 + w**4
+    # print(midpointRectangular4D(func, 1, 2, 1, 2, 1, 2, 1, 2, 10, 10, 10, 10))
 
     def func(x, y, z):
         return x**2 + y**2 + z**2
-    print(midpointRectangular3D(func, 1, 2, 1, 2, 1, 2, 1e2, 1e2))
-
-    def func(x, y, z, w):
-        return x**2 + y**2 + z**3 + w**4
-    print(midpointRectangular4D(func, 1, 2, 1, 2, 1, 2, 1, 2, 10, 10, 10, 10))
-
+    print(midpointRectangular3D(func, 1, 2, 3, 4, 5, 6, 1e4, 1e4, 1e4))
     return
 
 

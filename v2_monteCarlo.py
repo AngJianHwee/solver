@@ -24,6 +24,19 @@ def monteCarloRectangular2D(func, a, b, c, d, n):
     return float((b-a) * (d-c) * integral_sum/n)
 
 
+def monteCarloRectangular3D(func, a, b, c, d, e, f, n):
+    n = int(n)
+
+    x = np.random.uniform(a, b, n)
+    y = np.random.uniform(c, d, n)
+    z = np.random.uniform(e, f, n)
+    integral_sum = 0
+
+    for i in range(len(x)):
+        integral_sum += func(x[i], y[i], z[i])
+    return float((b-a) * (d-c) * (f-e) * integral_sum/n)
+
+
 def monteCarloRestrictFunc1D(func, restrict_func, a, b, n):
     n = int(n)
 
@@ -54,13 +67,17 @@ def monteCarloRestrictFunc2D(func, restrict_func, a, b, c, d, n):
 
 
 def main():
-    def func(x):
-        return x**x
-    print(monteCarloRectangular1D(func, 1, 2, 1e5))
+    # def func(x):
+    #     return x**x
+    # print(monteCarloRectangular1D(func, 1, 2, 1e5))
 
-    def func(x, y):
-        return x**x+y**2
-    print(monteCarloRectangular2D(func, 1, 2, 3, 4, 1e5))
+    # def func(x, y):
+    #     return x**x+y**2
+    # print(monteCarloRectangular2D(func, 1, 2, 3, 4, 1e5))
+
+    # def func(x, y, z):
+        # return x**2 + y**2 + z**2
+    # print(monteCarloRectangular3D(func, 1, 2, 3, 4, 5, 6, 1e5))
     return
 
 
